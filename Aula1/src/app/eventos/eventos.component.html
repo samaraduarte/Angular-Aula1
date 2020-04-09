@@ -3,19 +3,21 @@
   <h4>Seu componente está sendo exibido em tela</h4>
   <hr>
   <h5>Como aparece o seu evento abaixo?</h5>
-
+<div *ngFor="let e of evento">
   <div style="margin-top:30px">
-    Evento: {{evento.name}}
+    Evento: {{e.name}}
   </div>
   <div>
-    Data: {{evento.date}}
+    Data: {{e.date}}
   </div>
   <div>
-    Hora: {{evento.time}}
+    Hora: {{e.time}}
   </div>
-
   <div >
-    Endereço: {{evento.location.address}}, {{evento.location.city}}, {{ evento.location.country}}
+    URL: {{e.onlineUrl}}
   </div>
-
+  <div >
+    Endereço: {{e.location?.address}}, {{e.location?.city}}, {{ e.location?.country}}
+  </div>
+</div>
 </div>
